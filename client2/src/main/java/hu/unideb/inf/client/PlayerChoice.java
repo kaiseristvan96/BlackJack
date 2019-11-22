@@ -17,6 +17,9 @@ public interface PlayerChoice {
     // splitting the cards
     public void split();
 
-    //surrendering, losing half of the bet
+    // surrendering, losing half of the bet
     public void surrender();
+
+    // place a bet
+    public void placeBet();
 }

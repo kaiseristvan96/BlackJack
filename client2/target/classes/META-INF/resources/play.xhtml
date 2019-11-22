@@ -29,7 +29,13 @@
         <p:commandButton id="exit" value="Exit game" action="#{client.exitGame}"
                          update="play-form"
                          oncomplete="remoteAction()"/>
-        <p:remoteCommand name="remoteAction" action="#{client.checkButton}"/>
+        <p:remoteCommand name="remoteAction" action="#{client.sendData}"/>
+
+
+        <p:inputText id="userBet" value="#{client.currentBet}"></p:inputText>
+        <p:commandButton id="bet" value="Place bet" action="#{client.placeBet}"
+                         update="play-form"
+                         oncomplete="remoteAction()"/>
     </h:form>
 </h:body>
 </html>

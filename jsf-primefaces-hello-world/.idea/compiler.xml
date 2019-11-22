@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="jsf-primefaces-hello-world" target="1.8" />
+      <module name="jsf-primefaces-hello-world" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
