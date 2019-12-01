@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Play Page</title>
+</h:head>
+
+<h:body >
+    <h:form id="play-form">
+        <p:commandButton id="hit" value="Hit" action="#{client.hit}"
+                         update="play-form"
+                         oncomplete="remoteAction()"/>
+        <p:commandButton id="stand" value="Stand" action="#{client.stand}"
+                         update="play-form"
+                         oncomplete="remoteAction()"/>
+        <p:commandButton id="double-down" value="Double Down" action="#{client.doubleDown}"
+                         update="play-form"
+                         oncomplete="remoteAction()"/>
+        <p:commandButton id="split" value="Split" action="#{client.split}"
+                         update="play-form"
+                         oncomplete="remoteAction()"/>
+        <p:commandButton id="surrender" value="Surrender" action="#{client.surrender}"
+                         update="play-form"
+                         oncomplete="remoteAction()"/>
+        <p:commandButton id="exit" value="Exit game" action="#{client.exitGame}"
+                         update="play-form"
+                         oncomplete="remoteAction()"/>
+        <p:remoteCommand name="remoteAction" action="#{client.sendData}"/>
+
+
+        <p:inputText id="userBet" value="#{client.currentBet}"></p:inputText>
+        <p:commandButton id="bet" value="Place bet" 
+                         update="play-form"
+                         oncomplete="remoteAction()"/>
+    </h:form>
+</h:body>
+</html>
